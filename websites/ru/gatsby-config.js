@@ -4,7 +4,7 @@ module.exports = {
     siteDescription: 'Сайт Ивана Ганева',
     siteImage: '/banner-en.jpg',
     siteUrl: 'https://www.ganev.ru',
-    siteLanguage: 'ru',
+    siteLanguage: 'ru', // ru
     ogLanguage: `ru_RU`,
     author: 'Иван Ганев',
     authorDescription: 'веб разработчик',
