@@ -1,4 +1,20 @@
-module.exports = () => {
+module.exports = (options) => {
+  const {
+    uiText = {
+      feedShowMoreButton: 'show more',
+      feedSearchPlaceholder: 'search',
+      cardReadMoreButton: 'read more →',
+      allTagsButton: 'all tags'
+    }
+  } = options;
+  //
+  const {
+    feedShowMoreButton = 'show more',
+    feedSearchPlaceholder = 'search',
+    cardReadMoreButton = 'read more →',
+    allTagsButton = 'all tags'
+  } = uiText;
+  //
   return {
     siteMetadata: {
       siteTitle: 'Ivan Ganev',
@@ -30,10 +46,10 @@ module.exports = () => {
         options: {
           uiText: {
             // ui text fot translate
-            feedShowMoreButton: '↓ show more ↓',
-            feedSearchPlaceholder: 'search',
-            cardReadMoreButton: 'read more →',
-            allTagsButton: 'all tags'
+            feedShowMoreButton,
+            feedSearchPlaceholder,
+            cardReadMoreButton,
+            allTagsButton
           }
         }
       }
