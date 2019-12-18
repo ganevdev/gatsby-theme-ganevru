@@ -1,0 +1,49 @@
+{
+  "name": "gatsby-theme-ganevru-workspace",
+  "private": true,
+  "license": "UNLICENSED",
+  "author": "Ivan Ganev <ganevio92@gmail.com>",
+  "workspaces": [
+    "packages/*",
+    "websites/*"
+  ],
+  "scripts": {
+    "build:en": "yarn clean && yarn workspace en build",
+    "build:ru": "yarn clean && yarn workspace ru build",
+    "clean": "yarn workspaces run clean",
+    "lerna": "lerna",
+    "serve:en": "yarn clean && yarn workspace en serve",
+    "serve:ru": "yarn clean && yarn workspace ru serve",
+    "start:en": "yarn clean && yarn workspace en start",
+    "start:ru": "yarn clean && yarn workspace ru start"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "devDependencies": {
+    "babel-preset-gatsby": "^0.2.20",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-html": "^6.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-simple-import-sort": "^4.0.0",
+    "husky": "^3.0.9",
+    "identity-obj-proxy": "^3.0.0",
+    "lerna": "^3.18.3",
+    "lint-staged": "^9.4.2",
+    "prettier": "^1.18.2",
+    "react-test-renderer": "^16.11.0",
+    "yarn": "^1.19.1"
+  },
+  "engines": {
+    "node": ">=10.15.0",
+    "npm": "! use yarn !",
+    "yarn": ">=1.5.1"
+  }
+}

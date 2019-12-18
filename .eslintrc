@@ -1,0 +1,67 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": [
+    "airbnb",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "impliedStrict": true,
+      "jsx": true
+    },
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "useJSXTextNode": true
+  },
+  "plugins": ["prettier", "simple-import-sort", "import", "jsx-a11y"],
+  "rules": {
+    "import/first": "warn",
+    "import/newline-after-import": "warn",
+    "import/no-duplicates": "warn",
+    "import/no-extraneous-dependencies": "warn",
+    "import/order": "warn",
+    "jsx-a11y/accessible-emoji": "warn",
+    "jsx-a11y/anchor-has-content": "warn",
+    "jsx-a11y/label-has-associated-control": "off",
+    "no-console": "off",
+    "no-nested-ternary": "warn",
+    "no-param-reassign": "off",
+    "prefer-const": "warn",
+    "prettier/prettier": "warn",
+    "react-hooks/exhaustive-deps": "warn",
+    "react-hooks/rules-of-hooks": "error",
+    "react/button-has-type": "warn",
+    "react/destructuring-assignment": "warn",
+    "react/display-name": "off",
+    "react/jsx-filename-extension": [
+      "warn",
+      {
+        "extensions": [".js", ".jsx", ".tsx", "md", "mdx"]
+      }
+    ],
+    "react/jsx-indent": "off",
+    "react/jsx-key": "warn",
+    "react/jsx-one-expression-per-line": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/no-children-prop": "warn",
+    "react/prop-types": "off",
+    "simple-import-sort/sort": "warn",
+    "sort-imports": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx", "md", "mdx"]
+      }
+    },
+    "react": {
+      "version": "detect"
+    }
+  }
+}

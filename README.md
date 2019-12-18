@@ -1,0 +1,1 @@
+packages/gatsby-theme-ganevru/README.md
