@@ -34,8 +34,6 @@
     "no-param-reassign": "off",
     "prefer-const": "warn",
     "prettier/prettier": "warn",
-    "react-hooks/exhaustive-deps": "warn",
-    "react-hooks/rules-of-hooks": "error",
     "react/button-has-type": "warn",
     "react/destructuring-assignment": "warn",
     "react/display-name": "off",

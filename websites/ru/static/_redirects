@@ -1,0 +1,4 @@
+# These rules will change if you change your site’s custom domains or HTTPS settings
+
+# Optional: Redirect default Netlify subdomain to primary domain
+https://ganev-ru.netlify.com/* https://www.ganev.ru/:splat 301!
