@@ -1,5 +1,8 @@
 name: Publish Websites
-on: [push]
+on:
+  push:
+    branches:
+      - master
 jobs:
   publish:
     timeout-minutes: 220

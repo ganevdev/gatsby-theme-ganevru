@@ -23,5 +23,5 @@
   "engines": {
     "node": ">=10.15.0"
   },
-  "starter-name": "ganev-personal-site-ru"
+  "website-name": "ganev-personal-site-ru"
 }
