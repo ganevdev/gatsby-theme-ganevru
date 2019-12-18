@@ -4,7 +4,7 @@
 
 Based on Gatsby Theme Chronoblog
 
-Read more here:: [github.com/Chronoblog/gatsby-theme-chronoblog](https://github.com/Chronoblog/gatsby-theme-chronoblog)
+**Read more here: [github.com/Chronoblog/gatsby-theme-chronoblog](https://github.com/Chronoblog/gatsby-theme-chronoblog)**
 
 ## Websites
 
