@@ -1,6 +1,6 @@
 {
   "name": "ru",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": true,
   "description": "ru",
   "keywords": [],
@@ -16,7 +16,7 @@
     "gatsby": "^2.18.7",
     "gatsby-plugin-manifest": "^2.2.27",
     "gatsby-plugin-sitemap": "^2.2.21",
-    "gatsby-theme-ganevru": "^0.2.0",
+    "gatsby-theme-ganevru": "^0.2.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },
