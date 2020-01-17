@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "gatsby": "^2.18.18",
-    "gatsby-theme-chronoblog": "^0.14.5",
+    "gatsby-theme-chronoblog": "^0.16.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },
