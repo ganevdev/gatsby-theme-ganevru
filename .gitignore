@@ -64,3 +64,5 @@ README-DEV.md
 .contentful.json
 .env*
 !.env.example
+
+draft
