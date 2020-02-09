@@ -16,13 +16,13 @@ tags: ['проект', 'скрапер', 'статья', 'gatsbyjs']
 
 Общая структура проекта выглядит так:
 
--> [Скрапер Actor Liquipedia Semantic Search](#Скрапер-actor-liquipedia-semantic-search)  
--> [Скрапер Actor Liquipedia Players](#Скрапер-actor-liquipedia-players)  
--> [Пакет для работы с Google Tables](#Пакет-для-работы-с-google-tables)  
--> [EsportSet Data - обработка полученных данных](#esportset-data---обработка-полученных-данных)  
--> [Пакет для работы с API Proxy Market](#Пакет-для-работы-с-api-proxy-market)  
--> [Генерация сайтов при помощи Gatsbyjs](#Генерация-сайтов-при-помощи-gatsbyjs)  
--> [Мастер пакет](#Мастер-пакет)
+- Скрапер Actor Liquipedia Semantic Search
+- Скрапер Actor Liquipedia Players
+- Пакет для работы с Google Tables
+- EsportSet Data - обработка полученных данных
+- Пакет для работы с API Proxy Market
+- Генерация сайтов при помощи Gatsbyjs
+- Мастер пакет
 
 ## Скрапер Actor Liquipedia Semantic Search
 
