@@ -2,7 +2,7 @@
 title: Как были разработаны и как работают сайты EsportSet.com и CyberSet.org
 date: 2019-06-04
 tags: ['проект', 'скрапер', 'статья', 'gatsbyjs']
-draft: true
+draft: false
 ---
 
 Сайты [EsportSet.com](https://www.esportset.com) и [CyberSet.org](https://www.cyberset.org) представляют из себя каталоги девайсов с фильтрами и поиском. Главная фишка в том что у каждого девайса собирается статистика по профессиональным игрокам которые используют этот девайс. Но откуда и как эта статистика берется? Как она обрабатывается? И как эти сайты вообще функционируют?
@@ -11,7 +11,7 @@ draft: true
 
 ## Общая архитектура проекта
 
-Сам по себе проект представляет из себя монорепозиторий. Организован монорепо при помощи [Yarn Workspaces](https://classic.yarnpkg.com/en/docs/workspaces) и [Lerna](https://github.com/lerna/lerna). Подробнее о том как такое можно организовать, читайте здесь: [Workspaces in Yarn](https://classic.yarnpkg.com/blog/2017/08/02/introducing-workspaces). Я не могу показать код и репо проекта EsportSet, но, на самом деле, архитектура  схожа с моим опенсорсным проектом [Chronoblog](https://github.com/Chronoblog/gatsby-theme-chronoblog).
+Сам по себе проект представляет из себя монорепозиторий. Организован монорепо при помощи [Yarn Workspaces](https://classic.yarnpkg.com/en/docs/workspaces) и [Lerna](https://github.com/lerna/lerna). Подробнее о том как такое можно организовать, читайте здесь: [Workspaces in Yarn](https://classic.yarnpkg.com/blog/2017/08/02/introducing-workspaces). Я не могу показать код и репо проекта EsportSet, но, на самом деле, архитектура схожа с моим опенсорсным проектом [Chronoblog](https://github.com/Chronoblog/gatsby-theme-chronoblog).
 
 Ниже в статье речь будет идти об отдельных пакетах, все они лежат в папке `packages` монорепозитория. Каждый из пакетов изолирован от другого и "ничего о них не знает". Монорепозиторий позволяет раздробить весь проект на отдельные пакеты, тем самым изолировав их, и, при этом, разработка проекта остается такой же простой как если бы все это лежало в одном репо.
 
@@ -72,54 +72,134 @@ draft: true
 
 ```html
 <div class="table-responsive">
-<table class="wikitable" width="625" style="margin-top:1em; margin-bottom:-1px">
-<tbody><tr>
-<th>Hardware <sup><i><b><small><small><abbr title="Perfecto has submitted their own hardware information to Liquipedia">Player Submitted</abbr></small></small></b></i></sup><small>
-</small></th></tr></tbody></table>
-<table class="wikitable" width="625" style="margin:0; margin-bottom:-1px">
-<tbody><tr>
-<th colspan="2">Mouse
-</th></tr>
-<tr>
-<td style="text-align:left;padding:0 4px;line-height:25px;width:25px;"><abbr class="league-icon-small-image" style="border:none;" title="Zowie"><img alt="" src="/commons/images/a/ab/Zowie_gear-icon.png" width="25" height="25" loading="lazy"></abbr></td>
-<td style="padding:0 4px;"><b>Zowie Zowie Divina S1</b>
-</td></tr>
-</tbody></table>
-<table class="wikitable" width="625" style="margin:0; margin-bottom:-1px">
-<tbody><tr>
-<th colspan="2">Monitor</th>
-<th>Refresh rate</th>
-<th>In-game resolution</th>
-<th>Scaling
-</th></tr>
-<tr>
-<td style="text-align:left;padding:0 4px;line-height:25px;width:25px;"><abbr class="league-icon-small-image" style="border:none;" title="Zowie by BenQ"><img alt="" src="/commons/images/3/33/Zowie_by_benq-icon.png" width="50" height="50" loading="lazy"></abbr></td>
-<td style="padding:0 4px;"><b>Zowie by BenQ XL2540</b></td>
-<td style="padding:0 4px;">240 Hz<b></b></td>
-<td style="padding:0 4px;">1280×1024</td>
-<td style="padding:0 4px;">Streched
-</td></tr>
-</tbody></table>
-<table class="wikitable" width="625" style="margin:0">
-<tbody><tr>
-<th colspan="2">Keyboard
-</th>
-<th colspan="2">Headset
-</th></tr>
-<tr>
-<td style="text-align:left;padding:0 4px;line-height:25px;width:25px;"><abbr class="league-icon-small-image" style="border:none;" title="Hyperx"><img alt="" src="/commons/images/7/7a/Hyperx-icon.png" width="50" height="50" loading="lazy"></abbr></td>
-<td style="padding:0 4px;"><b>Hyperx Alloy FPS</b>&nbsp;<small><i>(Alloy FPS)</i></small>
-</td>
-<td style="text-align:left;padding:0 4px;line-height:25px;width:25px;"><abbr class="league-icon-small-image" style="border:none;" title="HyperX"><img alt="" src="/commons/images/7/7a/Hyperx-icon.png" width="50" height="50" loading="lazy"></abbr></td>
-<td style="padding:0 4px;"><b>HyperX Cloud Alpha</b>
-</td></tr>
-<tr>
-<th colspan="13" align="center" style="font-size:85%;padding:2px"><i>Last updated on 2019-06-04 (248 days ago).</i>
-</th></tr></tbody></table>
+  <table
+    class="wikitable"
+    width="625"
+    style="margin-top:1em; margin-bottom:-1px"
+  >
+    <tbody>
+      <tr>
+        <th>
+          Hardware
+          <sup
+            ><i
+              ><b
+                ><small
+                  ><small
+                    ><abbr
+                      title="Perfecto has submitted their own hardware information to Liquipedia"
+                      >Player Submitted</abbr
+                    ></small
+                  ></small
+                ></b
+              ></i
+            ></sup
+          ><small> </small>
+        </th>
+      </tr>
+    </tbody>
+  </table>
+  <table class="wikitable" width="625" style="margin:0; margin-bottom:-1px">
+    <tbody>
+      <tr>
+        <th colspan="2">Mouse</th>
+      </tr>
+      <tr>
+        <td style="text-align:left;padding:0 4px;line-height:25px;width:25px;">
+          <abbr
+            class="league-icon-small-image"
+            style="border:none;"
+            title="Zowie"
+            ><img
+              alt=""
+              src="/commons/images/a/ab/Zowie_gear-icon.png"
+              width="25"
+              height="25"
+              loading="lazy"
+          /></abbr>
+        </td>
+        <td style="padding:0 4px;"><b>Zowie Zowie Divina S1</b></td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="wikitable" width="625" style="margin:0; margin-bottom:-1px">
+    <tbody>
+      <tr>
+        <th colspan="2">Monitor</th>
+        <th>Refresh rate</th>
+        <th>In-game resolution</th>
+        <th>Scaling</th>
+      </tr>
+      <tr>
+        <td style="text-align:left;padding:0 4px;line-height:25px;width:25px;">
+          <abbr
+            class="league-icon-small-image"
+            style="border:none;"
+            title="Zowie by BenQ"
+            ><img
+              alt=""
+              src="/commons/images/3/33/Zowie_by_benq-icon.png"
+              width="50"
+              height="50"
+              loading="lazy"
+          /></abbr>
+        </td>
+        <td style="padding:0 4px;"><b>Zowie by BenQ XL2540</b></td>
+        <td style="padding:0 4px;">240 Hz<b></b></td>
+        <td style="padding:0 4px;">1280×1024</td>
+        <td style="padding:0 4px;">Streched</td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="wikitable" width="625" style="margin:0">
+    <tbody>
+      <tr>
+        <th colspan="2">Keyboard</th>
+        <th colspan="2">Headset</th>
+      </tr>
+      <tr>
+        <td style="text-align:left;padding:0 4px;line-height:25px;width:25px;">
+          <abbr
+            class="league-icon-small-image"
+            style="border:none;"
+            title="Hyperx"
+            ><img
+              alt=""
+              src="/commons/images/7/7a/Hyperx-icon.png"
+              width="50"
+              height="50"
+              loading="lazy"
+          /></abbr>
+        </td>
+        <td style="padding:0 4px;">
+          <b>Hyperx Alloy FPS</b>&nbsp;<small><i>(Alloy FPS)</i></small>
+        </td>
+        <td style="text-align:left;padding:0 4px;line-height:25px;width:25px;">
+          <abbr
+            class="league-icon-small-image"
+            style="border:none;"
+            title="HyperX"
+            ><img
+              alt=""
+              src="/commons/images/7/7a/Hyperx-icon.png"
+              width="50"
+              height="50"
+              loading="lazy"
+          /></abbr>
+        </td>
+        <td style="padding:0 4px;"><b>HyperX Cloud Alpha</b></td>
+      </tr>
+      <tr>
+        <th colspan="13" align="center" style="font-size:85%;padding:2px">
+          <i>Last updated on 2019-06-04 (248 days ago).</i>
+        </th>
+      </tr>
+    </tbody>
+  </table>
 </div>
 ```
 
-Как видите на самом деле это *четыре* таблицы, которые находятся внутри `<div class="table-responsive">`, при чем самая верхняя таблица нужна только для того что бы быть чем-то вроде "заголовка".
+Как видите на самом деле это _четыре_ таблицы, которые находятся внутри `<div class="table-responsive">`, при чем самая верхняя таблица нужна только для того что бы быть чем-то вроде "заголовка".
 
 На странице игрока могут быть и другие таблицы, порядок их не определен, как и порядок элементов внутри таблиц (и дивов, внутри которых находятся таблицы). То есть скрапер не может быть "уверен" в том что он скрапит именно таблицу с девайсами, а не, скажем, таблицу с настройками. А когда идет скрапинг таблицы девайсов, опять же, точно не определен порядок и наличие девайсов.
 
