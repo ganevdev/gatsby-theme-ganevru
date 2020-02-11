@@ -11,7 +11,7 @@ cover: './how-esportset-works-0.png'
 
 ## Общая архитектура проекта
 
-Сам по себе проект представляет из себя монорепозиторий. Организован монорепо при помощи [Yarn Workspaces](https://classic.yarnpkg.com/en/docs/workspaces) и [Lerna](https://github.com/lerna/lerna). Подробнее о том как такое можно организовать, читайте здесь: [Workspaces in Yarn](https://classic.yarnpkg.com/blog/2017/08/02/introducing-workspaces). Я не могу показать код и репо проекта EsportSet, но, на самом деле, архитектура схожа с моим опенсорсным проектом [Chronoblog](https://github.com/Chronoblog/gatsby-theme-chronoblog).
+Сам по себе проект представляет из себя монорепозиторий. Организован монорепо при помощи [Yarn Workspaces](https://classic.yarnpkg.com/en/docs/workspaces) и [Lerna](https://github.com/lerna/lerna). Подробнее о том как такое можно организовать, читайте здесь: [Workspaces in Yarn](https://classic.yarnpkg.com/blog/2017/08/02/introducing-workspaces). Я не могу показать код и репо проекта EsportSet, но, в целом, подход к архитектуре схож с моим опенсорсным проектом [Chronoblog](https://github.com/Chronoblog/gatsby-theme-chronoblog).
 
 Ниже в статье речь будет идти об отдельных пакетах, все они лежат в папке `packages` монорепозитория. Каждый из пакетов изолирован от другого и "ничего о них не знает". Монорепозиторий позволяет раздробить весь проект на отдельные пакеты, тем самым изолировав их, и, при этом, разработка проекта остается такой же простой как если бы все это лежало в одном репо.
 
