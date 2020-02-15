@@ -124,3 +124,5 @@ http://blog.carbonfive.com/2013/10/27/the-javascript-event-loop-explained/
 Крутое видео на YouTube про то как работает эвент луп: [What the heck is the event loop anyway? | Philip Roberts | JSConf EU](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
 
 Визуализация того как работает JavaScript: http://latentflip.com/loupe
+
+Еще один визуализатор для JavaScript, но визуализирующий контексты, замыкания и области видимости: https://tylermcginnis.com/javascript-visualizer/
