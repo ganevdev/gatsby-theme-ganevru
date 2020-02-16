@@ -10,6 +10,8 @@ tags: ['статья']
 
 ## Latentflip: Loupe
 
+![how-settimeout-works-in-javascript](./how-settimeout-works-in-javascript.jpg)
+
 [Latentflip: Loupe](http://latentflip.com/loupe)  
 [github.com/latentflip/loupe](https://github.com/latentflip/loupe)
 
