@@ -58,3 +58,13 @@ tags: ['статья']
 Еще существует схожий проект: [code2flow.com](https://code2flow.com) - но он уже коммерческий.
 
 К слову, если вам нужно просто нарисовать диаграмму (а не визуализировать какой-то код), вот отличный инструмент для этого: [www.draw.io](https://www.draw.io/)
+
+## Визуализация работы кода при помощи дебаггеров/отладчиков.
+
+На практике, для того чтобы понять как код работает, и, следовательно, выявить ошибки, используют отладчики. Но их так же можно использовать и для лучшего понимания того как работает JavaScript.
+
+Отладка кода это отдельная огромная тема, вот несколько статей с которых можно начать изучение:
+
+[Отладка в браузере Chrome](https://learn.javascript.ru/debugging-chrome)  
+[VS Code Debugging](https://code.visualstudio.com/Docs/editor/debugging)  
+[Отладка JavaScript в Google Chrome и Visual Studio Code](https://medium.com/devschacht/%D0%BE%D1%82%D0%BB%D0%B0%D0%B4%D0%BA%D0%B0-javascript-%D0%B2-google-chrome-%D0%B8-visual-studio-code-c2f07603a5b8)
