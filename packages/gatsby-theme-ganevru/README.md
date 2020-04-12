@@ -2,7 +2,7 @@
 
 ## Gatsby Theme Chronoblog
 
-Based on Gatsby Theme Chronoblog
+Based on Gatsby Theme Chronoblog.
 
 **Read more here: [github.com/Chronoblog/gatsby-theme-chronoblog](https://github.com/Chronoblog/gatsby-theme-chronoblog)**
 
